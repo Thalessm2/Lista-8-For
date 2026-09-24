@@ -1,0 +1,15 @@
+class Program//define uma classe chamada Program
+{
+    static void Main()//define o método Main, que é o ponto de entrada do programa
+    {
+        for (int numero = 5; numero <= 10; numero++)//define um loop for que itera de 5 a 10
+        {
+            Console.WriteLine("Tabuada do "+numero);//imprime a tabuada do número atual
+
+            for (int i = 1; i <= 10; i++)//define um loop for que itera de 1 a 10
+            {
+                Console.WriteLine(+numero+"x"+i+ "=" +numero*i);//imprime a multiplicação do número atual pelo valor de i
+            }
+        }
+    }
+}
