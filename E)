@@ -1,0 +1,28 @@
+class Program//Define uma classe chamada "Program"
+{
+    static void Main()//Define o método principal "Main" que é o ponto de entrada do programa
+    {
+        Console.Write("Digite um número inteiro: ");//Exibe uma mensagem solicitando ao usuário que digite um número inteiro
+        int numero = int.Parse(Console.ReadLine());//Lê a entrada do usuário, converte para inteiro e armazena na variável "numero"
+        bool primo = true;//Inicializa uma variável booleana "primo" como verdadeira, assumindo que o número é primo até que se prove o contrário
+        if (numero < 2)//Verifica se o número é menor que 2, pois números menores que 2 não são primos
+        {
+            primo = false;//Se o número for menor que 2, define "primo" como falso
+        }
+        else//Se o número for 2 ou maior, verifica se ele é primo
+        {
+            for (int i = 2; i <= Math.Sqrt(numero); i++)//Inicia um loop que vai de 2 até a raiz quadrada do número
+            {
+                if (numero % i == 0)//Verifica se o número é divisível por "i"
+                {
+                    primo = false;//Se for divisível, define "primo" como falso, indicando que o número não é primo
+                    break;//Sai do loop, pois já foi determinado que o número não é primo
+                }
+            }
+        }
+        if (primo)//Verifica o valor da variável "primo"
+            Console.WriteLine("O número é primo.");//Se "primo" for verdadeiro, exibe uma mensagem indicando que o número é primo
+        else//Se "primo" for falso, exibe uma mensagem indicando que o número não é primo
+            Console.WriteLine("O número não é primo.");//Exibe uma mensagem indicando que o número não é primo
+    }
+}
