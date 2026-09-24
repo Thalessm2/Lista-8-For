@@ -1,0 +1,18 @@
+class Program//define uma classe chamada Program
+{
+    static void Main()//define o método Main, que é o ponto de entrada do programa
+    {
+        Console.Write("Digite um número inteiro positivo: ");//exibe uma mensagem solicitando ao usuário que digite um número inteiro positivo
+        int numero = int.Parse(Console.ReadLine());//lê a entrada do usuário, converte para inteiro e armazena na variável numero
+
+        Console.WriteLine("Divisores:");//exibe uma mensagem indicando que os divisores do número serão listados
+
+        for (int i = 1; i <= numero; i++)//inicia um loop que vai de 1 até o número digitado pelo usuário
+        {
+            if (numero % i == 0)//verifica se o número é divisível por i (ou seja, se o resto da divisão é zero)
+            {
+                Console.WriteLine(i);//se for divisível, exibe o valor de i, que é um divisor do número
+            }
+        }
+    }
+}
