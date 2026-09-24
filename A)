@@ -1,0 +1,11 @@
+class Program //define uma classe chamada Program
+{
+    static void Main()//define o método Main, que é o ponto de entrada do programa
+    {
+        Console.WriteLine("O programa vai mostrar todos os numeros pares de 0 a 2");//exibe uma mensagem no console
+        for (int i = 0; i <= 100; i += 2)//inicia um loop for que começa em 0 e vai até 100, incrementando de 2 em 2
+        {
+            Console.WriteLine(i);//exibe o valor atual de i no console
+        }
+    }
+}
