@@ -1,0 +1,20 @@
+class Program//define uma classe chamada Program
+{
+    static void Main()//define o método Main, que é o ponto de entrada do programa
+    {
+        Console.Write("Quantos números deseja inserir? ");//solicita ao usuário a quantidade de números que deseja inserir
+        int quantidade = int.Parse(Console.ReadLine());//lê a quantidade de números inseridos pelo usuário e converte para inteiro
+
+        int maior = int.MinValue;//inicializa a variável maior com o menor valor possível de um inteiro
+
+        for (int i = 1; i <= quantidade; i++)//inicia um loop que se repete a quantidade de vezes especificada pelo usuário
+        {
+            Console.Write($"Digite o {i}º número: ");//solicita ao usuário que insira um número
+            int numero = int.Parse(Console.ReadLine());//lê o número inserido pelo usuário e converte para inteiro
+
+            if (numero > maior)//verifica se o número inserido é maior que o valor atual de maior
+                maior = numero;//se for, atualiza o valor de maior com o novo número
+        }
+        Console.WriteLine("O maior número é: " + maior);//exibe o maior número encontrado
+    }
+}
