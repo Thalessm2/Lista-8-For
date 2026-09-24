@@ -1,0 +1,23 @@
+class Program//define uma classe chamada Program
+{
+    static void Main()//define o método Main, que é o ponto de entrada do programa
+    {
+        Console.WriteLine("Números primos entre 1 e 100:");//imprime uma mensagem no console
+        for (int numero = 2; numero <= 100; numero++)//inicia um loop que percorre os números de 2 a 100
+        {
+            bool primo = true;//define uma variável booleana chamada primo e a inicializa como true
+            for (int i = 2; i <= Math.Sqrt(numero); i++)//inicia um loop que percorre os números de 2 até a raiz quadrada do número atual
+            {
+                if (numero % i == 0)//verifica se o número atual é divisível por i
+                {
+                    primo = false;//se for divisível, define primo como false
+                    break;//interrompe o loop interno
+                }
+            }
+            if (primo)//verifica se primo é true
+            {
+                Console.Write(numero + " ");//imprime o número atual no console, seguido de um espaço
+            }
+        }
+    }
+}
