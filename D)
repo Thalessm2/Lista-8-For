@@ -1,0 +1,24 @@
+class Program//Define uma classe chamada "Program"
+{
+    static void Main()//Define o método principal "Main" que é o ponto de entrada do programa
+    {
+        Console.Write("Digite um número inteiro positivo: "); // Solicita ao usuário que insira um número inteiro positivo
+
+        // Valida se a entrada é um número inteiro válido e maior que zero
+        if (int.TryParse(Console.ReadLine(), out int numero) && numero > 0)
+        {
+            int soma = 0;// Inicializa a variável "soma" com zero
+
+            for (int i = 1; i <= numero; i++)// Loop que percorre todos os números de 1 até o número inserido pelo usuário
+            {
+                soma += i;// Adiciona o valor de "i" à variável "soma"
+            }
+
+            Console.WriteLine("A soma de todos os números de 1 até "+numero+" é: "+soma);// Exibe o resultado da soma no console
+        }
+        else
+        {
+            Console.WriteLine("Entrada inválida. Por favor, insira um número inteiro positivo maior que zero.");// Exibe uma mensagem de erro caso a entrada seja inválida
+        }
+    }
+}
