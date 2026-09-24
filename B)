@@ -1,0 +1,12 @@
+class Program//define uma classe chamada Program
+{
+    static void Main()//define o método Main, que é o ponto de entrada do programa
+    {
+        Console.Write("Digite um número inteiro positivo para sabe os numeros pares ntere 0 e seu número ");//exibe uma mensagem pedindo ao usuário para digitar um número inteiro positivo
+        int numero = int.Parse(Console.ReadLine());//lê a entrada do usuário e converte para um número inteiro
+        for (int i =0; i <=numero; i+=2)//inicia um loop que começa em 0 e vai até o número digitado pelo usuário, incrementando de 2 em 2
+        {
+            Console.WriteLine(i);//exibe o valor atual de i, que representa os números pares entre 0 e o número digitado pelo usuário
+        }
+    }
+}
